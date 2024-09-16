@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+// import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from "../firebase/clientApp";
 
 const uiConfig = {
@@ -22,7 +22,7 @@ export default function SignInScreen() {
         >
             <h1>login</h1>
             <p>please sign in</p>
-            <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+            {/* <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /> */}
         </div>
     )
 }

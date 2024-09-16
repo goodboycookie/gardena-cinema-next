@@ -70,24 +70,24 @@ export default function Home() {
   // );
 
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const snapshot = await firestore.collection('movies').get();
-        const movieList = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setMovies(movieList);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching movies:", error);
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchMovies = async () => {
+  //     try {
+  //       const snapshot = await firestore.collection('movies').get();
+  //       const movieList = snapshot.docs.map(doc => ({
+  //         id: doc.id,
+  //         ...doc.data()
+  //       }));
+  //       setMovies(movieList);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error("Error fetching movies:", error);
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchMovies();
-  }, []);
+  //   fetchMovies();
+  // }, []);
 
 
   return (

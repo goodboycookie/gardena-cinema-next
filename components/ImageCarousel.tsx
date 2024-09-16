@@ -45,7 +45,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full md:w-[60%] mx-auto">
+    <div className="relative w-full md:w-[65%] mx-auto">
       <div className="relative overflow-hidden rounded-lg" style={{ paddingTop: '60%' }}>
         <img
           src={images[currentIndex].src}

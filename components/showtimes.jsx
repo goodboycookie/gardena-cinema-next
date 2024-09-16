@@ -17,8 +17,8 @@ const matinees = [["Black Panther 2: Wakanda Forever", "6:30pm", "Saturday Nov. 
             </div>
             </div>
           <div className="flex flex-row">
-            <div className="border-red-2 bg-red-600 p-2 m-1 w-50 br-2 rounded-md text-white">INFO</div>
-            <div className="border-black-1 bg-red-600 p-2 m-1 w-50 rounded-md text-white">BUY</div>
+            <div className="border-red-2 bg-red-600 p-2 m-1 br-2 rounded-md text-white">INFO</div>
+            <div className="border-black-1 bg-red-600 p-2 m-1  rounded-md text-white">BUY</div>
           </div>
       </div>
         )}

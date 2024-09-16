@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @font-face {
+    font-family: arizonawildcats;
+    src:url('/fonts/wildcats/arizonawildcats.otf');
+}
+@font-face {
     font-family: marqueeFont;
     src:url('/fonts/beadchain/MARQUEE_.TTF');
 }
@@ -33,8 +37,14 @@
     border-width: 0.25px;
 }
 .showtimes{
-    font-family: marqueeFont;
+    font-family: arizonawildcats;
     text-align: center;
-    font-size: 52px;
-    color: yellow;
+    font-size: 4rem;
+    letter-spacing: -3px;
+    color: white;
+    white-space: nowrap;
+    width: 95vw;
+    max-width: 100vw;
+    flex-shrink: 1;
+    /* font-stretch:wider; */
 }

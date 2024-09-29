@@ -9,7 +9,7 @@ const uiConfig = {
 
 }
 
-export default function SignInScreen() {
+export default function SignInScreen() { 
     return(
         <div
             style={{

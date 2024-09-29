@@ -91,19 +91,13 @@ export default function Home() {
 
 
   return (
-    <div className="bg-black min-h-screen">
+    <div>
       <Head>
         <title>Welcome to Gardena Cinema</title>
         <meta name="description" content="Experience the magic of movies at Gardena Cinema" />
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      {/* MARQUEE */}
-      <header>
-        <Marquee className="bg-yellow-300 text-4xl pt-3 pb-4" gradient={false} speed={100} direction="left">
-          <span className={styles.marquee}>. . . . . . . . . . <span className="text-2xl hover:text-white hover:cursor-pointer">INFO</span> . . . . . . . . . . . . . . . . .www.gardenacinema.com . . . . . . . . . . . . . . . <span className="text-2xl hover:text-white hover:cursor-pointer">ABOUT</span> . . . . . . . . . . . . www.gardenacinema.com . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . www.gardenacinema.com</span>
-        </Marquee> 
-      </header>
 
       {/* HOMEPAGE CONTENT */}
       <main className="flex flex-col items-center justify-start pt-8">

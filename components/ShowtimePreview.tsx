@@ -9,7 +9,7 @@ interface MovieShowtimeProps {
   moviePoster: string;
 }
 
-const MovieShowtime: React.FC<MovieShowtimeProps> = ({
+const MovieShowtime: React.  FC<MovieShowtimeProps> = ({
   movieTitle,
   moviePoster,
   showDate,
@@ -17,14 +17,14 @@ const MovieShowtime: React.FC<MovieShowtimeProps> = ({
   categories,
 }) => {
   return (
-    <div className="w-72 m-4 rounded-lg overflow-hidden shadow-lg border-4 border-white">
+    <div className="w-72 m-4 rounded-lg overflow-hidden shadow-lg border-4 border-white text-white hover:text-yellow-300 hover:cursor-pointer">
       <div className="relative h-96">
         <img
           src={moviePoster}
           alt={`${movieTitle} poster`}
         />
       </div>
-      <div className="bg-black text-white p-4">
+      <div className="p-4 pt-10">
         <h2 className="text-xl font-bold mb-2">{movieTitle}</h2>
         <p className="text-sm mb-3">{showDate}</p>
         <p className="text-sm mb-3">{showtimes.join(', ')}</p>

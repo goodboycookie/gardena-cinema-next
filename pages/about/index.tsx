@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function index() {
   return (
-    <div>about page!</div>
+    <h2>about page!</h2>
   )
 }
  

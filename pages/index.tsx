@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 import Marquee from 'react-fast-marquee'
 import ShowtimePreview from '../components/ShowtimePreview'
 import { firestore } from '../firebase/clientApp'
@@ -61,14 +62,13 @@ export default function Home() {
           id: doc.id,
           ...doc.data()
         }))
-        setMovies(movieList)
-        // console.log(movies);
-        console.log(movies);
+        setMovies(movieList);
       } catch (error) {
         console.error("Error fetching movies:", error)
       } finally {
         setLoading(false)
       }
+      console.log(movies);
     }
 
     fetchMovies()
@@ -95,11 +95,12 @@ export default function Home() {
               movies.map(movie => (
                 <ShowtimePreview 
                   key={movie.id}
+                  movieId={movie.id}
                   movieTitle={movie.eventName}
                   moviePoster={movie.eventPoster}
                   showtimes={movie.showtimes}
                   categories={movie.tags}
-                /> 
+                />
               ))
             )}
           </div>

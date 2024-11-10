@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {Timestamp} from 'firebase/firestore';
+// import { Key } from 'lucide-react';
 
 interface MovieShowtimeProps {
+  movieId: string;
   movieTitle: string;
   showtimes: Array<{
       time: Timestamp;
@@ -13,15 +16,17 @@ interface MovieShowtimeProps {
 }
 
 const MovieShowtime: React.  FC<MovieShowtimeProps> = ({
+  movieId,
   movieTitle,
   moviePoster,
   showtimes,
   categories,
 }) => {
   const formatShowtime = (timestamp: Timestamp) => {
-    console.log("showtime: ", timestamp);
+    console.log("movie id:  ", movieId);
+    // console.log("showtime: ", timestamp);
     const date = timestamp.toDate();
-    console.log("date: ", date);
+    // console.log("date: ", date);
     // Format the date part
     const days = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -52,6 +57,7 @@ const MovieShowtime: React.  FC<MovieShowtimeProps> = ({
   };
 
   return (
+    <Link href={`/events/${movieId}`}>
     <div className="w-72 m-4 rounded-lg overflow-hidden shadow-lg border-4 border-white text-white hover:text-yellow-300 hover:cursor-pointer">
       <div className="relative h-96">
         <Image
@@ -77,6 +83,7 @@ const MovieShowtime: React.  FC<MovieShowtimeProps> = ({
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

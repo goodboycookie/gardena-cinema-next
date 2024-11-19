@@ -8,7 +8,10 @@ interface MovieShowtimeProps {
   movieId: string;
   movieTitle: string;
   showtimes: Array<{
-      time: Timestamp;
+      time: {
+        seconds: number;
+        nanoseconds: number;
+      };
       seatsAvailable: number;
   }>;
   categories: string[];
@@ -22,10 +25,10 @@ const MovieShowtime: React.  FC<MovieShowtimeProps> = ({
   showtimes,
   categories,
 }) => {
-  const formatShowtime = (timestamp: Timestamp) => {
+  const formatShowtime = (timestampData: { seconds: number; nanoseconds: number }) => {
     console.log("movie id:  ", movieId);
     // console.log("showtime: ", timestamp);
-    const date = timestamp.toDate();
+    const date = new Date(timestampData.seconds * 1000);
     // console.log("date: ", date);
     // Format the date part
     const days = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
